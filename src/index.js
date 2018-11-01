@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.css'
+import Counter from './components/counter';
 
-ReactDOM.render(
-    <h1>Hello, world!</h1>,
-    document.getElementById('root')
+ReactDOM.render(<Counter />, document.getElementById('root')
   );
