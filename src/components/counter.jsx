@@ -1,27 +1,33 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.css'
 
 class Counter extends Component {
   state = {
-    count: 0,
-    tags: ["tag1", "tag2", "tag3"]
+    count: 5,
+    tags: ["Cathal", "Ryan", "2018"]
   };
 
+
+  
+
   render() {
+    const classes = "badge m-4 badge-";
+    
     return (
       <div>
-        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
-        <ul>
-          {this.state.tags.map(tag => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        <h1>Fitness Web App</h1>
+        <button className="btn btn-warning btn-sm m-4">Hurling Exercises</button>
+        <button className="btn btn-warning btn-sm m-4">Football Exercises</button>
+        <button className="btn btn-warning btn-sm m-4">Rugby Exercises</button>
+        <button className="btn btn-warning btn-sm m-4">Soccer Exercises</button>
+
+       
       </div>
     );
   }
 
   getBadgeClasses() {
-    let classes = "badge m-2 badge-";
+    let classes = "badge m-4 badge-";
     classes += this.state.count === 0 ? "warning" : "primary";
     return classes;
   }
